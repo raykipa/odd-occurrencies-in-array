@@ -1,0 +1,19 @@
+# you can write to stdout for debugging purposes, e.g.
+# print("this is a debug message")
+
+def solution(A):
+    # write your code in Python 3.6
+    #create a set of unpaired values
+    unpaired = set()
+
+    #iterate through the array
+    for i in A:
+        if i in unpaired:
+            #if item is not paired, remmove otherise add it to the set
+            unpaired.remove(i)
+        else:
+            unpaired.add(i)
+        #solution is remove the last value if it's length >0. meaning its paired
+    answer = unpaired.pop() if len(unpaired)>0 else 0
+    return answer
+    pass
