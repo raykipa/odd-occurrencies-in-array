@@ -9,7 +9,8 @@ def solution(A):
     #iterate through the array
     for i in A:
         if i in unpaired:
-            #if item is not paired, remmove otherise add it to the set
+            #if item is not paired, remove from list otherise add it to the set
+            #this solution is for iterating through all numbers to check whether there is a repeat
             unpaired.remove(i)
         else:
             unpaired.add(i)
